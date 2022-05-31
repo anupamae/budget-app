@@ -1,0 +1,19 @@
+.header {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+
+  &__h1 {
+    text-align: center;
+  }
+}
+
+.footer {
+  padding-top: 2em;
+  padding-bottom: 0.2em;
+
+  &__p {
+    color: #505050;
+    font-size: smaller;
+    text-align: center;
+  }
+}
