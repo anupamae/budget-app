@@ -1,12 +1,14 @@
 import React from 'react';
 
+import DataTable from './Components/DataTable';
+
 import './App.scss';
 
 const App = () => {
   return (
     <React.Fragment>
       <Header />
-
+      <DataTable />
       <Footer />
     </React.Fragment>
   );

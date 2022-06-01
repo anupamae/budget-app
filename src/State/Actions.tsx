@@ -10,15 +10,15 @@ export enum TransactionTypes {
 
 export interface ITransactionAction {
     type: TransactionActionTypes,
-    id?: String
+    id?: string
     payload?: {
-        date: String,
-        desc: String,
-        amount: Number,
+        date: string,
+        desc: string,
+        amount: number,
         type: TransactionTypes
     },
 }
 
-export const addIncome = (date: String, desc: String, amount: Number): ITransactionAction => ({ type: TransactionActionTypes.Add, payload: { date: date, desc: desc, amount: amount, type: TransactionTypes.Income } });
-export const addExpense = (date: String, desc: String, amount: Number): ITransactionAction => ({ type: TransactionActionTypes.Add, payload: { date: date, desc: desc, amount: amount, type: TransactionTypes.Expense } });
-export const removeTransaction = (id: String): ITransactionAction => ({ type: TransactionActionTypes.Remove, id: id });
+export const addIncome = (date: string, desc: string, amount: number): ITransactionAction => ({ type: TransactionActionTypes.Add, payload: { date: date, desc: desc, amount: amount, type: TransactionTypes.Income } });
+export const addExpense = (date: string, desc: string, amount: number): ITransactionAction => ({ type: TransactionActionTypes.Add, payload: { date: date, desc: desc, amount: amount, type: TransactionTypes.Expense } });
+export const removeTransaction = (id: string): ITransactionAction => ({ type: TransactionActionTypes.Remove, id: id });

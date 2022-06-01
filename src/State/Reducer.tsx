@@ -2,11 +2,10 @@ import { v4 as uuidv4 } from 'uuid';
 import { ITransactionAction, TransactionActionTypes, TransactionTypes } from './Actions'
 
 export interface ITransactionItem {
-  id: String,
-  date: String,
-  desc: String,
-  amount: Number,
-  type: TransactionTypes
+  id: string,
+  date: string,
+  desc: string,
+  amount: number
 }
 
 export interface ITransactionState {
@@ -40,8 +39,7 @@ export const transactionReducer = (state = loadState(), action: ITransactionActi
             id: uuidv4(),
             date: action.payload!.date,
             desc: action.payload!.desc,
-            amount: action.payload!.amount,
-            type: action.payload!.type
+            amount: (action.payload!.type === TransactionTypes.Expense) ? 0 - action.payload!.amount : action.payload!.amount
           },
           ...state.list
         ]
